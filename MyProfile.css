@@ -1,0 +1,906 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+}
+#menubar {
+    display: none;
+}
+#menucross {
+    display: none;
+}
+.menu {
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    background-image: linear-gradient(rgb(91, 91, 197) 10%, rgba(0, 0, 0, 0.847) 80%);
+}
+.menu2right {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 500;
+        display: none;
+        background-color: rgba(128, 128, 128, 0.543);
+}
+.head {
+    background-repeat: no-repeat;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    position: fixed;
+    top: 30px;
+    left: 60px;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 40px;
+    z-index: 2000;
+    font-family: "Cormorant Garamond", "Baskerville", serif;
+    transition: color 1s linear;
+    background-image: linear-gradient(rgb(248, 215, 155) 50%, rgb(242, 30, 30));
+}
+.head::after {
+    content: "";
+    width: 40%;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    background-color: chartreuse;
+}
+.head::before {
+    content: "";
+    width: 40%;
+    height: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    background-color: chartreuse;
+}
+.head:hover {
+    color: red;
+}
+.menu .sidenav {
+    width: 100%;
+    height: 60%;
+    box-shadow: 0px 2px 2px white;
+    list-style-type: none;
+    position: absolute;
+    text-align: center;
+}
+.sidenav li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sidenav li a {
+    color: white;
+    font-size: 30px;
+    display: inline-block;
+    margin: auto;
+    text-decoration: none;
+    transition: all 1.2s linear;
+}
+.sidenav li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    margin: 1px auto;
+    display: block;
+    background-color: white;
+    transition: width 2s;
+}
+.sidenav li a:hover::after {
+    width: 100%;
+}
+li a:hover {
+    transform: scale(1.2);
+    text-shadow: 2px 2px 1px red;
+}
+
+.content1 {
+    width: 75%;
+    height: 100vh;
+    /* overflow: hidden; */
+    position: absolute;
+    right: 0;
+    transition: all 2s linear;
+    background-image: radial-gradient(circle at 20% 30%, black, transparent 50%),
+    radial-gradient(circle at 70% 20%, blue, transparent 50%),
+    radial-gradient(circle at 40% 80%, lightblue, transparent 50%),
+    radial-gradient(circle at 80% 70%, violet, transparent 50%);
+}
+hr {
+    width: 100%;
+    height: 3px;
+    margin: 0px auto;
+    background-color: white;
+}
+.content1 .box {
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    color: white;
+    font-size: 35px;
+    display: grid;
+    align-content: center;
+}
+ .h h1 {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 55px;
+    color: transparent;
+    background-image: linear-gradient(rgb(255, 187, 148),rgb(0, 255, 153));
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+.h h2 span{
+    color: red;
+    transition: width 1.3s linear;
+}
+.h h2 span:hover{
+    color: rgb(213, 6, 6);
+}
+.h p {
+    font-size: 25px;
+}
+.h .btn-cv {
+    width: max-content;
+    padding: 5px 10px;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+    background-color: rgb(159, 159, 255);
+    cursor: pointer;
+}
+.h .btn-cv:hover {
+    transform: scale(0.9);
+    border: 2px solid white;
+    background-color: rgb(139, 139, 255);
+}
+
+/*About*/
+.about {
+    background-image: radial-gradient(rgba(0, 0, 255, 0.524) ,blueviolet);
+}
+.about .about-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.about .pro img {
+    width: 400px;
+    border-radius: 20px;
+    height: 500px;
+    border: 5px solid black;
+}
+.pro img:hover {
+    border-color: white;
+}
+.about p {
+    margin-left: 40px;
+    margin-right: 40px;
+    text-indent: 50px;
+    font-size: 22px;
+}
+
+/*Education*/
+.edu {
+    background-image: linear-gradient(blue 10%,darkblue 80%);    
+}
+.edu-con {
+    width: 95%;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.edu h1 {
+        text-align: center;
+        margin-bottom: 25px;
+}
+.card {
+    width: 400px;
+    height: 400px;
+    color: black;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px red;
+    background-color: white;
+    transition: all 1.5s linear;
+}
+table {
+    height: 500px;
+    text-align: center;
+}
+
+.edu-one:hover, .edu-two:hover, .edu-three:hover {
+    transform: translateY(-50px);
+    background-color: gainsboro;
+}
+
+/*Projects*/
+.projects {
+    background-image: linear-gradient(green,white);
+}
+.container {
+    width: 800px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.pre {
+    width: 5%;
+    height: 400px;
+    position: absolute;
+    left: 0%;
+    background-color: rgba(237, 234, 234, 0.685);
+}
+#pre {
+    width: 50%;
+    opacity: 0.5;
+}
+#pre:hover {
+    opacity: 1;
+}
+.con-card {
+    width: 90%;
+    height: 600px;
+    color: black;
+    border-radius: 20px;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    background-color: white;
+}
+.next {
+    width: 5%;
+    height: 400px;
+    position: absolute;
+    right: 0%;
+    background-color: rgba(237, 234, 234, 0.685);
+}
+#next {
+    width: 50%;
+    opacity: 0.5;
+}
+#next:hover {
+    opacity: 1;
+}
+.con-card h1 {
+    text-align: center;
+    font-weight: bold;
+}
+.con-card p {
+    padding: 0px 50px;
+    font-size: 20px;
+}
+.con-card a {
+    color: white;
+    z-index: 2;
+    font-size: 28px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background-color: blue;
+    text-decoration: none;
+}
+.con-card a:hover {
+    background-color: darkblue;
+}
+
+.certificates {
+    background: #2cbaf2;
+    background: linear-gradient(90deg, rgba(44, 186, 242, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(255, 255, 0, 1) 100%);
+}
+#autobox {
+    width: 80%;
+    height: 600px;
+    margin: auto;
+}
+#imgblock {
+    width: 70%;
+    margin: auto;
+}
+#exceptionimg {
+    width: 40%;
+    height: 580px;
+    margin: auto;
+}
+
+#achievements {
+ background-image: linear-gradient(blue,white);
+}
+#imgblock2 {
+    width: 60%;
+    height: 550px;
+    margin: auto;
+}
+#imgblock2s {
+    width: 50%;
+    height: 550px;
+    margin: auto;
+}
+
+#contact {
+    background-color: darkblue;
+}
+.c_ul {
+    margin: auto;
+    list-style-type: none;
+}
+.c_ul li {
+    line-height: 45px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.c_ul i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+#c_span {
+    font-size: 22px;
+    font-weight: 400;
+}
+.c_links {
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.c_links i {
+color: white;
+font-size: 40px;
+}
+.c_links i:hover {
+color: greenyellow;
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        width: 25%;
+    }
+    .head {
+        top: 30px;
+        padding: 20px;
+        font-size: 25px;
+    }
+    .head::after {
+        height: 2px;
+    }
+    .head::before {
+        height: 2px;
+    }
+    .menu .sidenav {
+        top: 150px;
+    }
+    .sidenav li {
+        margin-bottom: 10px;
+    }
+    .sidenav li a {
+        font-size: 20px;
+    }
+    .sidenav li a::after {
+        height: 2px;
+    }
+    li a:hover {
+        transform: scale(1.1);
+    }
+    
+    .content1 {
+        width: 75%;
+        height: 100%;
+        /* overflow: hidden; */
+    }
+    .content1 .box {
+        font-size: 25px;
+    }
+     .h h1 {
+        font-size: 40px;
+    }
+    .h p {
+        font-size: 20px;
+    }
+    .h .btn-cv {
+        width: 160px;
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    .h .btn-cv:hover {
+        transform: scale(0.9);
+    }
+    
+    /*About*/
+    .about .pro img {
+        width: 200px;
+        border-radius: 10px;
+        height: 250px;
+        border: 3px solid black;
+    }
+    .about p {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-indent: 20px;
+        font-size: 15px;
+    }
+    
+    /*Education*/
+    .edu-con {
+        height: 500px;
+        gap: 8px;
+    }
+    .edu h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .card {
+        width: 250px;
+        height: 200px;
+        border-radius: 10px;
+    }
+    table {
+        height: 300px;
+        font-size: 15px;
+    }
+    
+    .edu-one:hover, .edu-two:hover, .edu-three:hover {
+        transform: translateY(-30px);
+    }
+    
+    /*Projects*/
+    .container {
+        width: 800px;
+        height: 500px;
+    }
+    .pre {
+        width: 5%;
+        height: 250px;
+    }
+    .con-card {
+        width: 90%;
+        height: 450px;
+        border-radius: 10px;
+    }
+    .next {
+        width: 5%;
+        height: 250px;
+    }
+    .con-card h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+    .con-card p {
+        padding: 0px 25px;
+        font-size: 15px;
+    }
+    .con-card a {
+        font-size: 17px;
+        border-radius: 5px;
+    }
+    
+    #autobox {
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    #imgblock {
+        width: 70%;
+        margin: auto;
+    }
+    #exceptionimg {
+        width: 60%;
+        height: 480px;
+        margin: auto;
+    }
+
+    #imgblock2 {
+        width: 50%;
+        height: 450px;
+    }
+    #imgblock2s {
+        width: 50%;
+        height: 450px;
+    }
+    #c_h5 {
+        font-size: 18px;
+    }
+    #c_p {
+        font-size: 18px;
+    }
+    .c_ul li {
+        line-height: 35px;
+        font-size: 22px;
+    }
+    .c_ul i {
+        font-size: 20px;
+    }
+    #c_span {
+        font-size: 22px;
+    }
+    .c_links i {
+    font-size: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    /*About*/
+    .about .about-con{
+        width: 100%;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+    .about .pro img {
+        width: 180px;
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        border: 2px solid black;
+    }
+    .about p {
+        margin-left: 5px;
+        margin-right: 5px;
+        text-indent: 10px;
+        font-size: 14px;
+    }
+    
+    /*Education*/
+    .edu-con {
+        height: 500px;
+        gap: 8px;
+    }
+    .edu h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .card {
+        width: 220px;
+        height: 200px;
+        border-radius: 10px;
+    }
+    table {
+        height: 300px;
+        font-size: 13px;
+    }
+    
+    /*Projects*/
+    .container {
+        width: 800px;
+        height: 600px;
+    }
+    .pre {
+        width: 5%;
+        height: 250px;
+    }
+    .con-card {
+        width: 90%;
+        height: 520px;
+        border-radius: 10px;
+    }
+    .next {
+        width: 5%;
+        height: 250px;
+    }
+    .con-card h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+    .con-card p {
+        padding: 0px 25px;
+        font-size: 14px;
+    }
+    .con-card a {
+        font-size: 15px;
+        border-radius: 5px;
+    }  
+
+    #imgblock2 {
+        width: 60%;
+        height: 400px;
+    }
+    #imgblock2s {
+        width: 60%;
+        height: 420px;
+    }
+
+    .c_ul li {
+        line-height: 45px;
+        font-size: 25px;
+    }
+    .c_ul i {
+        margin-right: 10px;
+        font-size: 22px;
+    }
+    #c_span {
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .c_links {
+        width: 300px;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .c_links i {
+    color: white;
+    font-size: 40px;
+    }
+    .c_links i:hover {
+    color: greenyellow;
+    }   
+}
+
+@media (max-width: 400px) {
+    .menu {
+        width: 60%;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        display: none;
+        transition: all 2s linear;
+    }
+    .head {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 15px;
+        font-size: 20px;
+        z-index: 1500;
+    }
+    .menu .head::after {
+        content: "";
+        width: 15%;
+        height: 2px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: chartreuse;
+    }
+    .menu .head::before {
+        content: "";
+        width: 15%;
+        height: 2px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: chartreuse;
+    }
+    #menubar {
+        color: white;
+        position: fixed;
+        top: 20px;
+        right: 10px;
+        z-index: 1000;
+        font-size: 25px;
+        display: block;
+    }
+    #menucross {
+        color: red;
+        position: fixed;
+        top: 20px;
+        right: 10px;
+        z-index: 1000;
+        font-size: 25px;
+        display: none;
+    }
+    .menu .sidenav {
+        height: 50%;
+        text-align: center;
+    }
+    .sidenav li {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .sidenav li a {
+        font-size: 18px;
+    }
+    li a:hover {
+        transform: scale(1.2);
+        text-shadow: 2px 2px 1px red;
+    }
+    .menu2right {
+        display: none;
+    }
+    .content1 {
+        width: 100%;
+        height: 100vh;
+        /* overflow: hidden; */
+        position: absolute;
+        left: 0px;
+        right: 0;
+    }
+    .content1 .box {
+        padding: 25px;
+        font-size: 20px;
+    }
+    .h h1 {
+        width: 100%;
+        padding-top: 40px;
+        white-space: nowrap;
+        font-size: 22px;
+    }
+    .h p {
+        line-height: 20px;
+        font-size: 18px;
+    }
+    .h .btn-cv {
+        padding: 2px 7px;
+        color: white;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+    .h .btn-cv:hover {
+        transform: scale(0.9);
+    }
+
+    /*About*/
+    .about .about-con{
+        height: 600px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .about .con_p {
+        height: 300px;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .about .pro img {
+        width: 200px;
+        border-radius: 5px;
+        height: 250px;
+        border: 2px solid black;
+    }
+    .about p {
+        text-indent: 20px;
+        font-size: 18px;
+    }
+
+    /*Education*/
+    .edu-con {
+        width: 98%;
+        height: 620px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .edu h1 {
+        text-align: center;
+        margin-top: 80;
+        margin-bottom: 0px;
+    }
+    .card {
+        width: 90%;
+        height: 200px;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px red;
+    }
+    table {
+        height: 200px;
+        text-align: center;
+    }
+
+    .edu-one:hover, .edu-two:hover, .edu-three:hover {
+        transform: translateY(0px);
+        transform: scale(1.1);
+        background-color: gainsboro;
+    }
+
+    /*Projects*/
+    .container {
+        width: 800px;
+        height: 600px;
+    }
+    .pre {
+        width: 5%;
+        height: 200px;
+        position: absolute;
+        left: 0%;
+        border: none;
+        background-color: rgba(237, 234, 234, 0.685);
+    }
+    #pre {
+        width: 50%;
+        opacity: 0.5;
+    }
+    #pre:hover {
+        opacity: 1;
+    }
+    .con-card {
+        width: 90%;
+        height: 580px;
+        color: black;
+        border-radius: 10px;
+        top: 20px;
+    }
+    .next {
+        height: 200px;
+        border: none;
+    }
+    .con-card p {
+        padding: 0px 10px;
+        font-size: 12px;
+    }
+    .con-card a {
+        font-size: 20px;
+    }
+
+    #autobox {
+        width: 100%;
+        height: 500px;
+    }
+    #imgblock {
+        width: 90%;
+    }
+    #exceptionimg {
+        width: 90%;
+        height: 300px;
+        margin: auto;
+    }
+
+    #imgblock2 {
+        width: 80%;
+        height: 380px;
+    }
+    #imgblock2s {
+        width: 80%;
+        height: 400px;
+    }
+
+    .c_ul li {
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .c_ul i {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    #c_span {
+        font-size: 15px;
+    }
+    .c_links {
+        width: 200px;
+    }
+    .c_links i {
+    font-size: 25px;
+    }
+}
